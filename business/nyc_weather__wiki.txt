@@ -1,0 +1,15 @@
+Dataset of weather in New York City.
+
+The raw, sample iceberg table has been formatted to update data types and column names.
+
+**Data type changes:**
+* "date" converted to 'YYYY-MM-DD' date format.
+
+**Column name changes:**
+* "name" to "location_name"
+* "date" to "calendar_date",
+* "awnd" to "average_wind",
+* "prcp" to "precipitation",
+* "snwd" to "snow_depth",
+* "tempmax" to "temp_max",
+* "tempmin" to "temp_min".
