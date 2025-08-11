@@ -1,4 +1,4 @@
-Dataset of taxi trips in New York City.
+**Dataset of taxi trips in New York City.**
 
 The raw, sample iceberg table has been formatted to update data types and column names.
 
