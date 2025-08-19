@@ -22,11 +22,9 @@ FROM   (SELECT
         FROM   Samples."samples.dremio.com"."NYC-weather.csv" AS nyc_weather
 ) nested_0;
 
--- Create gold folder in the workshop space
-CREATE FOLDER workshop.gold;
 
--- Create gold-level enriched trips enriched dataset
-CREATE VIEW workshop.gold.taxi_enriched AS SELECT 
+-- Create gold-level trips dataset enriched with weather data
+CREATE VIEW workshop.gold.trips_enriched AS SELECT 
     location_name,
     pickup_date,
     pickup_time,
@@ -43,4 +41,3 @@ CREATE VIEW workshop.gold.taxi_enriched AS SELECT
     temp_min
 FROM 
     workshop.silver.trips as t INNER JOIN workshop.silver.weather as w ON t.pickup_date = w.calendar_date;
-    
