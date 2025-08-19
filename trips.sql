@@ -1,4 +1,4 @@
---Create NYC Taxi View with cleaned attribute names and values
+-- Create NYC Taxi View with cleaned attribute names and values
 SELECT 
     TO_TIME(pickup_time, 'HH24:MI:SS', 1) AS pickup_time,
     TO_DATE(pickup_date, 'YYYY-MM-DD', 1) AS pickup_date,

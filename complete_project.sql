@@ -1,5 +1,5 @@
---Create NYC Weather View
-SELECT 
+-- Create Weather View
+CREATE VIEW workshop.silver.weather AS SELECT 
         station,
         location_name,
         TO_DATE(calendar_date, 'YYYY-MM-DD', 1) AS calendar_date,
@@ -21,3 +21,26 @@ FROM   (SELECT
                 CAST(nyc_weather."tempmin" AS FLOAT) AS temp_min
         FROM   Samples."samples.dremio.com"."NYC-weather.csv" AS nyc_weather
 ) nested_0;
+
+-- Create gold folder in the workshop space
+CREATE FOLDER workshop.gold;
+
+-- Create gold-level enriched trips enriched dataset
+CREATE VIEW workshop.gold.taxi_enriched AS SELECT 
+    location_name,
+    pickup_date,
+    pickup_time,
+    passenger_count,
+    trip_distance,
+    fare_amount,
+    tip_amount,
+    total_amount,
+    average_wind,
+    precipitation,
+    snow,
+    snow_depth,
+    temp_max,
+    temp_min
+FROM 
+    workshop.silver.trips as t INNER JOIN workshop.silver.weather as w ON t.pickup_date = w.calendar_date;
+    
