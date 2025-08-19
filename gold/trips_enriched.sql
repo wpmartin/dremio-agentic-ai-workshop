@@ -14,4 +14,4 @@ SELECT
     temp_max,
     temp_min
 FROM 
-    workshop.business.nyc_taxi_trips__formatted as t INNER JOIN workshop.business.nyc_weather__formatted as w ON t.pickup_date = w.calendar_date;
+    workshop.silver.trips as t INNER JOIN workshop.silver.weather as w ON t.pickup_date = w.calendar_date;

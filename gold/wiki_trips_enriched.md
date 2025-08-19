@@ -1,6 +1,6 @@
 ## Data Documentation for Enriched NYC Taxi Trips
 
-This production-level data product, `nyc_taxi_trips__enriched`, details taxi rides in [New York City](https://en.wikipedia.org/wiki/New_York_City) providing pickup information, trip cost, trip distance, and other information. 
+This production-level data product, `trips_enriched`, details taxi rides in [New York City](https://en.wikipedia.org/wiki/New_York_City) providing pickup information, trip cost, trip distance, and other information. 
 
 It has been enriched with weather data from a weather station based in New York City.
 
