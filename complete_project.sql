@@ -22,6 +22,8 @@ FROM   (SELECT
         FROM   Samples."samples.dremio.com"."NYC-weather.csv" AS nyc_weather
 ) nested_0;
 
+-- Create gold folder in the workshop catalog
+CREATE FOLDER workshop.gold;
 
 -- Create gold-level trips dataset enriched with weather data
 CREATE VIEW workshop.gold.trips_enriched AS SELECT 
