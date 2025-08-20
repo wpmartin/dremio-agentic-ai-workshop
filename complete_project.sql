@@ -69,4 +69,5 @@ CREATE VIEW workshop.gold.trips_enriched AS SELECT
     temp_max,
     temp_min
 FROM 
-    workshop.silver.trips as t INNER JOIN workshop.silver.nyc_weather as w ON t.pickup_date = w.calendar_date;
+    workshop.silver.trips as t INNER JOIN workshop.silver.nyc_weather as w ON t.pickup_date = w.calendar_date
+    LIMIT 30000000;
