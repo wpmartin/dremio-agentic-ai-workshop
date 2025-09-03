@@ -1,8 +1,8 @@
 # dremio-agentic-ai-workshop
 
 - [Dremio Docs](https://docs.dremio.com)
-- [Dremio MCP Server Repo](https://github.com/dremio/dremio-mcp)
-- [Dremio University Tutorial: Claude and Dremio](https://university.dremio.com/course/dremio-docker-mcp-server)
+- [Dremio MCP Server repo](https://github.com/dremio/dremio-mcp)
+- [Dremio University tutorial: Claude and Dremio](https://university.dremio.com/course/dremio-docker-mcp-server)
 - [Dremio Blog: Using the Dremio MCP Server with any LLM Model](https://www.dremio.com/blog/using-the-dremio-mcp-server-with-any-llm-model/)
 
 This repository is to accompany Dremio's Agentic AI Virtual Workshops. It contains SQL scripts that refine sample Dremio datasets to create a basic, three-layer data pipeline. 
