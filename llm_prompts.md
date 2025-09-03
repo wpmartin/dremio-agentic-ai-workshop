@@ -1,6 +1,6 @@
-## Workshop LLM Prompts
+# Workshop LLM Prompts
 
-# Analytics
+## Analytics
 - What datasets are available in the dremio catalog?
 - Which datasets should be used in production?
 - Preview 10 rows from the workshop.gold.trips_enriched view as a table
@@ -8,7 +8,7 @@
 - Is there a correlation between rain and the price of a taxi ride?
 - Plot an ascii bar graph of passenger count against total fare amount
 
-# Data Transformation
+## Data Transformation
 - List the bronze layer datasets
 - Show me the raw SF weather dataset
 - Are there any columns in the raw SF weather data that are missing values? Show as a table with missing values as a count and as a percentage of all rows?
