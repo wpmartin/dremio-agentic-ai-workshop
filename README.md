@@ -11,5 +11,5 @@ This repository is to accompany Dremio's Agentic AI Virtual Workshops. It contai
 - You will need to create an Enterprise Catalog called `workshop` and add a folder called `bronze` into which a view will be manually created.
 - This repo contains the following scripts:
     - `complete_project.sql` - will create and save the rest of the views and medallion folder structure needed for the workshop.
-    - `wiki_trips_enriched.txt` - markdown documentation to be used as the Dremio Wiki for the gold-level dataset `trips_enriched`. Saved as a txt file to make it easier for you to copy.
+    - `wiki_trips_enriched.txt` - markdown documentation to be used as the Dremio Wiki for the gold-level dataset `trips_enriched`.
     - `llm_prompts.md` - the llm prompts used throughout the workshop.
