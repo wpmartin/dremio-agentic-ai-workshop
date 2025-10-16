@@ -1,16 +1,17 @@
 -- -- Steps to create bronze directory and the trips_raw view, which are done manually during the workshop
 -- CREATE FOLDER workshop.bronze;
--- CREATE VIEW workshop.bronze.trips_raw AS SELECT * FROM Samples."samples.dremio.com"."NYC-taxi-trips.csv";
+-- CREATE OR REPLACE VIEW workshop.bronze.trips_raw AS SELECT * FROM Samples."samples.dremio.com"."NYC-taxi-trips-iceberg";
+
+-- Create silver and gold folders in the workshop catalog
+CREATE FOLDER workshop.silver;
+CREATE FOLDER workshop.gold;
 
 -- Create raw copies of the sample weather datasets in the bronze-layer
-CREATE VIEW workshop.bronze.nyc_weather_raw AS SELECT * FROM Samples."samples.dremio.com"."NYC-weather.csv";
-CREATE VIEW workshop.bronze.sf_weather_raw AS SELECT * FROM Samples."samples.dremio.com"."SF weather 2018-2019.csv";
-
--- Create silver folder in the workshop catalog
-CREATE FOLDER workshop.silver;
+CREATE OR REPLACE VIEW workshop.bronze.nyc_weather_raw AS SELECT * FROM Samples."samples.dremio.com"."NYC-weather.csv";
+CREATE OR REPLACE VIEW workshop.bronze.sf_weather_raw AS SELECT * FROM Samples."samples.dremio.com"."SF weather 2018-2019.csv";
 
 -- Create silver-layer trips View with cleaned attribute names
-CREATE VIEW workshop.silver.trips AS SELECT 
+CREATE OR REPLACE VIEW workshop.silver.trips AS SELECT 
     TO_TIME(pickup_time, 'HH24:MI:SS', 1) AS pickup_time,
     TO_DATE(pickup_date, 'YYYY-MM-DD', 1) AS pickup_date,
     passenger_count,
@@ -30,7 +31,7 @@ FROM   (SELECT
 ) nested_0;
 
 -- Create silver-layer weather View with cleaned attribute names and data types
-CREATE VIEW workshop.silver.nyc_weather AS SELECT 
+CREATE OR REPLACE VIEW workshop.silver.nyc_weather AS SELECT 
         station,
         location_name,
         TO_DATE(calendar_date, 'YYYY-MM-DD', 1) AS calendar_date,
@@ -53,11 +54,8 @@ FROM   (SELECT
         FROM   workshop.bronze.nyc_weather_raw AS nyc_weather
 ) nested_0;
 
--- Create gold folder in the workshop catalog
-CREATE FOLDER workshop.gold;
-
 -- Create gold-layer trips View enriched with weather data
-CREATE VIEW workshop.gold.trips_enriched AS SELECT 
+CREATE OR REPLACE VIEW workshop.gold.trips_enriched AS SELECT 
     location_name,
     pickup_date,
     pickup_time,
