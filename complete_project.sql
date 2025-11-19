@@ -1,10 +1,9 @@
--- -- Steps to create bronze directory and the trips_raw view, which are done manually during the workshop
--- CREATE FOLDER workshop.bronze;
--- CREATE OR REPLACE VIEW workshop.bronze.trips_raw AS SELECT * FROM Samples."samples.dremio.com"."NYC-taxi-trips-iceberg";
+CREATE FOLDER IF NOT EXISTS workshop.bronze;
+CREATE OR REPLACE VIEW workshop.bronze.trips_raw AS SELECT * FROM Samples."samples.dremio.com"."NYC-taxi-trips.csv";
 
 -- Create silver and gold folders in the workshop catalog
-CREATE FOLDER workshop.silver;
-CREATE FOLDER workshop.gold;
+CREATE FOLDER IF NOT EXISTS workshop.silver;
+CREATE FOLDER IF NOT EXISTS workshop.gold;
 
 -- Create raw copies of the sample weather datasets in the bronze-layer
 CREATE OR REPLACE VIEW workshop.bronze.nyc_weather_raw AS SELECT * FROM Samples."samples.dremio.com"."NYC-weather.csv";
