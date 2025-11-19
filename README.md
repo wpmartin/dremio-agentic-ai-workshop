@@ -11,10 +11,10 @@
 
 This repository is to accompany Dremio's Agentic AI Virtual Workshops. It contains SQL scripts that refine sample Dremio datasets to create a basic, three-layer data pipeline, which will be interogated using an AI Agent. 
 
-- This repo contains the following scripts:
+This repo contains the following scripts:
     - `complete_project.sql` - will create and save the rest of the views and medallion folder structure needed for the workshop.
-    - `wiki_trips_enriched.txt` - markdown documentation to be used as the Dremio Wiki for the gold-level dataset `trips_enriched`.
-    - `ai_agent_prompts.md` - the llm prompts used throughout the workshop.
+    - `wiki_nyc_trips_enriched.txt` - markdown text to be used as the Dremio Wiki for the gold-level dataset `nyc_trips_enriched`.
+    - `ai_agent_prompts.md` - the AI agent prompts used throughout the workshop.
 
 ## Setup
 
@@ -56,11 +56,11 @@ Repeat this same process for the following two datasets:
 - `NYC-weather.csv`
 - `SF weather 2018-2019.csv`
 
-### 3. Create medallion data structure
+### 3. Create the medallion data structure
 
-Open the [complete_project.sql](https://github.com/wpmartin/dremio-agentic-ai-workshop/blob/main/complete_project.sql) file contained in this repo. Copy the entire script into the Dremio UI SQL Runner (the third icon down on the UI sidebar, underneath the dataset explorer) and click "Run".
+Open the [complete_project.sql](https://github.com/wpmartin/dremio-agentic-ai-workshop/blob/main/complete_project.sql) file contained in this repo. Copy the entire script into the Dremio SQL Runner (the third icon down on the UI sidebar, underneath the dataset explorer) and click "Run".
 
-### 4. Create semantic layer
+### 4. Create the semantic layer
 
 Navigate to the dataset details sidebar for the `workshop.gold.nyc_trips_enriched` dataset. At the top of this sidebar add the label `application`.
 
@@ -70,4 +70,6 @@ At the bottom of the sidebar is the "Wiki" section. Click on the green "Edit wik
 
 That is all the data prep completed! 
 
-Now navigate to the home page of the Dremio UI (the home icon on the left sidebar, above the dataset explorer) to find the AI Agent interface. Open [ai_agent_prompts.md](https://github.com/wpmartin/dremio-agentic-ai-workshop/blob/main/ai_agent_prompts.md) and use these prompts to explore the datasets.
+Now navigate to the home page of the Dremio UI (the home icon on the left sidebar, above the dataset explorer) to find the AI Agent interface. 
+
+Open [ai_agent_prompts.md](https://github.com/wpmartin/dremio-agentic-ai-workshop/blob/main/ai_agent_prompts.md) and use these prompts to explore the datasets.
