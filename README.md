@@ -16,10 +16,9 @@ This repository is to accompany Dremio's Agentic AI Virtual Workshops. It contai
     - `wiki_trips_enriched.txt` - markdown documentation to be used as the Dremio Wiki for the gold-level dataset `trips_enriched`.
     - `ai_agent_prompts.md` - the llm prompts used throughout the workshop.
 
-## 🛠 Requirements
-    - This workshop is designed to use the [Dremio Cloud](https://www.dremio.com/get-started/?utm_source=ev_buffer&utm_medium=influencer&utm_campaign=next-gen-cloud&utm_term=11-19-2025&utm_content=willmartin) free trial.
-
 ## Setup
+
+This workshop is designed to use the [Dremio Cloud](https://www.dremio.com/get-started/?utm_source=ev_buffer&utm_medium=influencer&utm_campaign=next-gen-cloud&utm_term=11-19-2025&utm_content=willmartin) free trial.
 
 ### 1. Add the workshop Namespace
 After logging into Dremio Cloud, you will see a dark-blue sidebar of icons on the left side of the UI. Click on the second icon from the top, that looks like a table, which will take you to the dataset explorer page.
@@ -53,8 +52,9 @@ On the dataset explorer, click on the "Add Source" button to bring up the "Add D
 </p>
 
 Repeat this same process for the following two datasets:
-    - `NYC-weather.csv`
-    - `SF weather 2018-2019.csv`
+
+- `NYC-weather.csv`
+- `SF weather 2018-2019.csv`
 
 ### 3. Create medallion data structure
 
