@@ -12,9 +12,10 @@
 This repository is to accompany Dremio's Agentic AI Virtual Workshops. It contains SQL scripts that refine sample Dremio datasets to create a basic, three-layer data pipeline, which will be interogated using an AI Agent. 
 
 This repo contains the following scripts:
-    - `complete_project.sql` - will create and save the rest of the views and medallion folder structure needed for the workshop.
-    - `wiki_nyc_trips_enriched.txt` - markdown text to be used as the Dremio Wiki for the gold-level dataset `nyc_trips_enriched`.
-    - `ai_agent_prompts.md` - the AI agent prompts used throughout the workshop.
+
+  - `complete_project.sql` - will create and save the rest of the views and medallion folder structure needed for the workshop.
+  - `wiki_nyc_trips_enriched.txt` - markdown text to be used as the Dremio Wiki for the gold-level dataset `nyc_trips_enriched`.
+  - `ai_agent_prompts.md` - the AI agent prompts used throughout the workshop.
 
 ## Setup
 
