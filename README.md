@@ -64,7 +64,7 @@ Open the `complete_project.sql` file contained in this repo. Copy the entire scr
 
 Navigate to the dataset details sidebar for the `workshop.gold.nyc_trips_enriched` dataset. At the top of this sidebar add the label `application`.
 
-At the bottom of the sidebar is the "Wiki" section. Click on the green `Edit wiki` text to open up a markdown text window. Copy the text from the file `wiki_nyc_trips_enriched.txt` into this window. Do not worry about the table ascii characters not aligning, as Dremio will handle these. Click the "Save" button in the bottom right of this window. 
+At the bottom of the sidebar is the "Wiki" section. Click on the green "Edit wiki" text to open up a markdown text window. Copy the text from the file `wiki_nyc_trips_enriched.txt` into this window. Do not worry about the table ascii characters not aligning, as Dremio will handle these. Click the "Save" button in the bottom right of this window. 
 
 ### 5. Use the AI Agent
 
