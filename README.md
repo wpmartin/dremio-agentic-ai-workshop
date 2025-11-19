@@ -70,4 +70,4 @@ At the bottom of the sidebar is the "Wiki" section. Click on the green "Edit wik
 
 That is all the data prep completed! 
 
-Now navigate to the home page of the Dremio UI (the home icon on the left sidebar, above the dataset explorer) to find the AI Agent interface. Open the `ai_agent_prompts.md` in this repo and use these prompts to explore the datasets.
+Now navigate to the home page of the Dremio UI (the home icon on the left sidebar, above the dataset explorer) to find the AI Agent interface. Open the (ai_agent_prompts.md)[ai_agent_prompts.md] in this repo and use these prompts to explore the datasets.
