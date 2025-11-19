@@ -73,4 +73,4 @@ That is all the data prep completed!
 
 Now navigate to the home page of the Dremio UI (the home icon on the left sidebar, above the dataset explorer) to find the AI Agent interface. 
 
-Open [ai_agent_prompts.md](https://github.com/wpmartin/dremio-agentic-ai-workshop/blob/main/ai_agent_prompts.md) and use these prompts to explore the datasets.
+Open [ai_agent_prompts.md](https://github.com/wpmartin/dremio-agentic-ai-workshop/blob/main/ai_agent_prompts.md) and use these prompts to explore the data.
